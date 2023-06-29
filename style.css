@@ -1,14 +1,14 @@
 /* 设置背景图片与效果 */
 #app::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-image: var(--test-theme-background);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: var(--test-theme-background);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 /* 删除背景 */
@@ -19,79 +19,113 @@
 .contact,
 .tab-header,
 .radio-tab,
-.q-collapse-item>.q-collapse-item__header,
+.q-collapse-item > .q-collapse-item__header,
 .msg-content-container,
 .normal-file,
 .forward-ops .op-icon,
 .sys-notify,
 .sys-notify-card {
-    background: initial !important;
+  background: initial !important;
 }
-
 
 /* 列表条目圆角 */
 .viewport-list__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
 }
 
 .list-item {
-    border-radius: 16px;
+  border-radius: 16px;
 }
 
 .list-item:hover {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .group-chat {
-    display: initial !important;
+  display: initial !important;
 }
 
 .chat-msg-area {
-    overflow: initial !important;
+  overflow: initial !important;
 }
 
 .chat-msg-area .list-wrap {
-    padding-bottom: calc(150px + 20px);
+  padding-bottom: calc(150px + 20px);
 }
 
 .chat-input-area {
-    border-radius: 16px;
-    margin: 20px;
-    top: calc(var(--inputAreaHeight) * -1 + -40px);
-    z-index: 9;
+  border-radius: 16px;
+  margin: 20px;
+  top: calc(var(--inputAreaHeight) * -1 + -40px);
+  z-index: 9;
 }
-
 
 /* 浅色模式 */
 @media (prefers-color-scheme: light) {
-
-    /* 添加模糊 */
-    .sidebar,
-    .msg-content-container,
-    .normal-file,
-    .forward-ops .op-icon,
-    .radio-tab,
-    .sys-notify-card,
-    .chat-input-area {
-        backdrop-filter: brightness(90%) saturate(120%) blur(8px);
-    }
+  /* 添加模糊 */
+  .sidebar,
+  .msg-content-container,
+  .normal-file,
+  .forward-ops .op-icon,
+  .radio-tab,
+  .sys-notify-card,
+  .chat-input-area {
+    backdrop-filter: brightness(90%) saturate(120%) blur(8px);
+  }
 }
-
 
 /* 深色模式 */
 @media (prefers-color-scheme: dark) {
+  /* 添加模糊 */
+  .sidebar,
+  .msg-content-container,
+  .normal-file,
+  .forward-ops .op-icon,
+  .radio-tab,
+  .sys-notify-card,
+  .chat-input-area {
+    backdrop-filter: brightness(110%) saturate(120%) blur(8px);
+  }
+}
 
-    /* 添加模糊 */
-    .sidebar,
-    .msg-content-container,
-    .normal-file,
-    .forward-ops .op-icon,
-    .radio-tab,
-    .sys-notify-card,
-    .chat-input-area {
-        backdrop-filter: brightness(110%) saturate(120%) blur(8px);
-    }
+.sidebar .beta-text {
+  display: none;
+}
+.recent-contact,
+.group-box__wrapper {
+  backdrop-filter: brightness(90%) saturate(120%) blur(20px);
+}
+.chat-header {
+  background: initial !important;
+  position: absolute !important;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.chat-header::before,
+.side-panel::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: initial !important;
+  backdrop-filter: brightness(90%) saturate(120%) blur(20px);
+  z-index: -1;
+}
+.record-all-msg .message .msg-content-container {
+  border-radius: 8px !important;
+  padding-left: 10px !important;
+}
+.group-box__wrapper {
+  height: calc(100% - 66px) !important;
+  margin-top: 66px;
+}
+.side-panel {
+  background: initial !important;
 }
