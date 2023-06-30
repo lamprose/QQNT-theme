@@ -73,7 +73,8 @@
   .forward-ops .op-icon,
   .radio-tab,
   .sys-notify-card,
-  .chat-input-area {
+  .chat-input-area,
+  .contact-layout__left-area {
     backdrop-filter: brightness(90%) saturate(120%) blur(8px);
   }
 }
@@ -87,8 +88,12 @@
   .forward-ops .op-icon,
   .radio-tab,
   .sys-notify-card,
-  .chat-input-area {
+  .chat-input-area,
+  .contact-layout__left-area {
     backdrop-filter: brightness(110%) saturate(120%) blur(8px);
+  }
+  #app {
+    background-color: var(--bg_white);
   }
 }
 
@@ -129,6 +134,9 @@
 .group-box__wrapper {
   height: calc(100% - 66px) !important;
   margin-top: 66px;
+}
+.chat-msg-area__tip--top-btn {
+  top: 66px;
 }
 .side-panel {
   background: initial !important;
