@@ -13,6 +13,7 @@
 
 /* 删除背景 */
 .sidebar,
+.sidebar-nav,
 .tab-container,
 .recent-contact,
 .viewport-list__inner,
@@ -117,6 +118,9 @@
   background: initial !important;
   backdrop-filter: brightness(90%) saturate(120%) blur(20px);
   z-index: -1;
+}
+.side-panel::before {
+  height: 100vh;
 }
 .record-all-msg .message .msg-content-container {
   border-radius: 8px !important;
