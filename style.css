@@ -141,3 +141,22 @@
 .side-panel {
   background: initial !important;
 }
+.ml-root > .ml-list.list {
+  margin-top: 66px !important;
+}
+.setting-layout .setting-main,
+.setting-layout .setting-tab,
+.record,
+.record-msg-date,
+.file-manager-main,
+.sender-container,
+.nav-bar-container,
+.file-type-container,
+.group-file-container,
+.q-collapse-item,
+.favorites-layout,
+.favorites-layout__left-area,
+.favorites-layout__content {
+  background-color: initial !important;
+  backdrop-filter: brightness(90%) saturate(120%) blur(20px);
+}
